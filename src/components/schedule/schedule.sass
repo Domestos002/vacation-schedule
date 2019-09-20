@@ -1,0 +1,105 @@
+@import "../variables"
+
+.schedule
+  &__person-card
+    display: flex
+    align-items: center
+    font-size: $font-size-small
+    line-height: 15px
+    text-align: left
+  &__person-img
+    width: 32px
+    height: 32px
+    background-color: gray
+    border-radius: 100%
+    margin-right: 8px
+    flex-shrink: 0
+  &__title
+    font-size: $font-size-large
+    color: #2D2E2E
+  &__prev, &__next
+    display: flex
+    width: 24px
+    height: 24px
+    &::before
+      content: ''
+      background-repeat: no-repeat
+      background-size: 12px 12px
+      background-position: 50% 50%
+      width: 100%
+      height: 100%
+  &__prev::before
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDcgMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNLTgtNmgyNHYyNEgtOHoiLz48cGF0aCBkPSJNNi43MS43MWEuOTk2Ljk5NiAwIDAgMC0xLjQxIDBMLjcxIDUuM2EuOTk2Ljk5NiAwIDAgMCAwIDEuNDFMNS4zIDExLjNhLjk5Ni45OTYgMCAxIDAgMS40MS0xLjQxTDIuODMgNmwzLjg4LTMuODhjLjM5LS4zOS4zOC0xLjAzIDAtMS40MXoiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvZz48L3N2Zz4=)
+  &__next::before
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDcgMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNLTktNmgyNHYyNEgtOXoiLz48cGF0aCBkPSJNLjI5LjcxYS45OTYuOTk2IDAgMCAwIDAgMS40MUw0LjE3IDYgLjI5IDkuODhhLjk5Ni45OTYgMCAxIDAgMS40MSAxLjQxTDYuMjkgNi43YS45OTYuOTk2IDAgMCAwIDAtMS40MUwxLjcuN0MxLjMyLjMyLjY4LjMyLjI5LjcxeiIgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPg==)
+  &__year
+    font-size: $font-size-large
+    color: #232323
+    text-align: center
+    line-height: 12px
+    display: flex
+    align-items: center
+    margin: 0 8px
+  &__head
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    background-color:  #F7F7F7
+    padding: 17px 20px 0 17px
+  &__week-list
+    display: flex
+    justify-content: center
+  &__table-wrapper
+    padding-top: 22px
+    background-color: #F7F7F7
+  &__week
+    display: flex
+    flex-direction: column
+    width: 8px
+    & + .schedule__week
+      margin-left: 2px
+    &:first-child
+      flex-direction: column-reverse
+  &__day
+    width: 100%
+    display: block
+    background-color: #F6F6F6
+    height: 4px
+    &--active
+      background-color: #1EBEB4
+      cursor: pointer
+  &__table
+    width: 100%
+    table-layout: fixed
+    th:first-child
+      padding-left: 16px
+    td
+      background-color: #fff
+      border-bottom:  1px solid #F7F7F7
+    th, td
+      text-align: center
+      vertical-align: middle
+      width: 7%
+      padding-top: 8px
+      padding-bottom: 8px
+      &:first-child
+        width: 13%
+  &__popup
+    background: #fff
+    box-shadow: 0 0 4px 0 rgba(107,107,107,0.50)
+    border-radius: 4px
+    padding: 15px
+    width: 345px
+    height: 100px
+    position: fixed
+    top: 50%
+    left: 50%
+  &__popup-person
+    display: flex
+    align-items: center
+  &__popup-person-img
+    width: 54px
+    height: 54px
+    border-radius: 100%
+    margin-right: 16px
+    background-color: gray
